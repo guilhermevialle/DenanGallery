@@ -39,7 +39,7 @@ Using [Unsplash API](https://unsplash.com/developers)
 
 ![](https://github.com/guilhermevialle/DenanGallery/blob/main/DenanGallery/Screenshot/capture3.png)
 
-- #### Searches have their own pagination, but they are limited, with a maximum of 32
+- #### Searches have their own pagination, but they are limited, with a maximum of 33
 
 ![](https://github.com/guilhermevialle/DenanGallery/blob/main/DenanGallery/Screenshot/capture6.png)
 
