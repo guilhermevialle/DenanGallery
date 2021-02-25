@@ -12,6 +12,7 @@ Using [Unsplash API](https://unsplash.com/developers)
 -   Minimalist
 -   A lot of images
 -   Preview and Download Images
+-   Search by category
 
 ### Interface
 - ##### Screenshots
