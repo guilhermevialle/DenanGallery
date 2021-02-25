@@ -1,0 +1,333 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+
+    background-color: #333;
+    background-image: url(https://images.unsplash.com/photo-1511275539165-cc46b1ee89bf?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80);
+    background-size: cover;
+
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.navbar-expand-sm {
+    width: 100%;
+    height: 10vh;
+    position: sticky;
+
+    .inpNav {
+        width: 200px;
+        height: 45px;
+
+        border: 3px solid white;
+        border-radius: 30px;
+        outline: none;
+
+        background-color: transparent;
+        padding: 10px;
+
+        color: white;
+
+        transition: 0.5s ease;
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    #pesquisaBtn {
+        outline: none;
+        color: white;
+        background-color: transparent;
+        border: 3px solid #fff;
+        width: 150px;
+        height: 45px;
+        border-radius: 40px;
+    }
+
+    ::placeholder {
+        color: white;
+    }
+}
+
+.paginationDiv {
+    width: 100%;
+    height: 10vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+
+    transition: 0.2s ease;
+
+    .pagination {
+        li {
+            a {
+                cursor: pointer;
+                border-color: rgb(95, 95, 95);
+                color: rgb(95, 95, 95);
+
+                &:hover {
+                    color: #333;
+                    border-color: #333;
+
+                    &:focus {
+                        border-color: #333;
+                    }
+                }
+            }
+        }
+    }
+}
+.section {
+    width: 100%;
+    height: 80vh;
+
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    position: relative;
+
+    overflow: scroll;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    transition: 0.5s ease;
+
+    #imgInicial {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    #textInicial {
+        width: 50%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        padding: 12.5%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        position: absolute;
+        backdrop-filter: blur(5px);
+
+        input {
+            width: 70%;
+            height: 45px;
+            border: 3px solid white;
+            border-radius: 30px;
+            outline: none;
+            background-color: transparent;
+            padding: 10px;
+            color: white;
+        }
+
+        p {
+            color: white;
+        }
+
+        h1 {
+            font-weight: 600;
+            color: white;
+            font-size: 4rem;
+            letter-spacing: 3.5px;
+
+            span {
+                font-size: 4.5rem;
+                font-weight: bold;
+                color: rgb(255, 119, 29);
+            }
+        }
+
+        ::placeholder {
+            color: white;
+        }
+    }
+
+    .socialMedia {
+        position: absolute;
+        right: 5%;
+        top: 40%;
+
+        p {
+            padding: 5px;
+            color: white;
+            display: block;
+            display: flex;
+            align-items: center;
+            box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px,
+                rgba(0, 0, 0, 0.24) 0px 1px 2px;
+            width: 200px;
+            height: 50px;
+
+            a {
+                margin: 0 7px;
+                color: white;
+            }
+        }
+    }
+}
+
+.imgBox {
+    width: 310px;
+    height: 310px;
+    padding: 5px;
+    margin: 10px;
+    position: relative;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .info {
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        position: absolute;
+        top: 0;
+        z-index: 10;
+
+        transform: translateY(-100px);
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.5s ease all;
+
+        p {
+            font-size: 1rem;
+            font-weight: bold;
+        }
+    }
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+    height: 5px;
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(0deg, #a3a3a3 0%, #c9c9c9 65%);
+    border-radius: 0px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(13deg, #8f8f8f 14%, #adadad 64%);
+}
+::-webkit-scrollbar-track {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: inset 7px 10px 12px #f0f0f0;
+}
+
+.imageOpened {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.719);
+
+    top: 0;
+    z-index: 110;
+    position: absolute;
+
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-200px);
+    transition: 0.5s ease all;
+
+    position: fixed;
+
+    img {
+        max-width: 90%;
+        max-height: 90%;
+    }
+}
+// particulas effects
+@function random_range($min, $max) {
+    $rand: random();
+    $random_range: $min + floor($rand * (($max - $min) + 1));
+    @return $random_range;
+}
+
+.snow {
+    $total: 200;
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: white;
+    border-radius: 50%;
+
+    @for $i from 1 through $total {
+        $random-x: random(1000000) * 0.0001vw;
+        $random-offset: random_range(-100000, 100000) * 0.0001vw;
+        $random-x-end: $random-x + $random-offset;
+        $random-x-end-yoyo: $random-x + ($random-offset / 2);
+        $random-yoyo-time: random_range(30000, 80000) / 100000;
+        $random-yoyo-y: $random-yoyo-time * 100vh;
+        $random-scale: random(10000) * 0.0001;
+        $fall-duration: random_range(10, 30) * 1s;
+        $fall-delay: random(30) * -1s;
+
+        &:nth-child(#{$i}) {
+            opacity: random(10000) * 0.0001;
+            transform: translate($random-x, -10px) scale($random-scale);
+            animation: fall-#{$i} $fall-duration $fall-delay linear infinite;
+        }
+
+        @keyframes fall-#{$i} {
+            #{percentage($random-yoyo-time)} {
+                transform: translate($random-x-end, $random-yoyo-y)
+                    scale($random-scale);
+            }
+
+            to {
+                transform: translate($random-x-end-yoyo, 100vh)
+                    scale($random-scale);
+            }
+        }
+    }
+}
+
+.testando {
+    background-color: white;
+    width: 70%;
+    height: 80vh;
+
+    position: absolute;
+    top: 13%;
+
+    transform: translateX(150%);
+    transition: 0.5s ease;
+
+    div {
+        width: 40%;
+        height: 100%;
+        backdrop-filter: blur(2px);
+        position: absolute;
+        top: 10%;
+        left: 10%;
+
+        h1 {
+            color: white;
+            font-size: 3.5rem;
+            letter-spacing: 2px;
+            font-family: "Arvo", serif;
+        }
+    }
+}
