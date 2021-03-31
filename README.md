@@ -15,7 +15,7 @@ Using [Unsplash API](https://unsplash.com/developers)
 -   Search by category
 
 ### Interface
-- ##### Screenshots
+- ##### Preview
 
 ![](https://github.com/guilhermevialle/DenanGallery/blob/main/DenanGallery/Screenshot/capture.png)
 ![](https://github.com/guilhermevialle/DenanGallery/blob/main/DenanGallery/Screenshot/capture4.png)
